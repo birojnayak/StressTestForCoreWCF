@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{9AF2F9CC-510E-47E6-BADC-7A9EEC4D1E83}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="StressTest/App.config">
+    <Files>
+      <File FileName="StressTest/Program.cs" Line="40" Column="37" />
+      <File FileName="StressTest/IEchoService.cs" Line="17" Column="6" />
+      <File FileName="StressTest/App.config" Line="4" Column="44" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="StressTest" expanded="True">
+            <Node name="StressTest" expanded="True">
+              <Node name="App.config" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.StressTest PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
