@@ -10,7 +10,7 @@ namespace StressTest
 {
     class Program
     {
-        private readonly static string _basicHttpEndPointAddress = @"https://172.31.40.50:8000/wsHttp";
+        private readonly static string _basicHttpEndPointAddress = @"https://yourhostip:8000/wsHttp";
         static void Main(string[] args)
         {
             for (int i = 0; i < 100; i++)
@@ -37,7 +37,7 @@ namespace StressTest
 
         private static async Task SingleCallPerChannelAsync(int count, int iteration, String task)
         {
-                await Task.Yield();
+                await Task.Yield(); 
            
             var factory = CreateChannelFactoryNetTCP<IEchoService>();
 
@@ -138,6 +138,7 @@ namespace StressTest
             }
         }
 
+
         private static ChannelFactory<TChannel> CreateChannelFactory<TChannel>()
         {
             var binding = new WSHttpBinding(SecurityMode.TransportWithMessageCredential);
@@ -160,7 +161,7 @@ namespace StressTest
             binding.Security.Message.ClientCredentialType = System.ServiceModel.MessageCredentialType.UserName;
             binding.OpenTimeout = binding.ReceiveTimeout = binding.CloseTimeout = binding.CloseTimeout = TimeSpan.FromMinutes(30);
             EndpointIdentity dnsIdentity = EndpointIdentity.CreateDnsIdentity("localhost");
-            EndpointAddress endpoint = new EndpointAddress(new Uri("net.tcp://wcfserv.mscore.local:8808/nettcp"), dnsIdentity);
+            EndpointAddress endpoint = new EndpointAddress(new Uri("net.tcp://yourhostname:8808/nettcp"), dnsIdentity);
             var factory = new ChannelFactory<TChannel>(binding, endpoint);
             System.ServiceModel.Description.ClientCredentials clientCredentials = (System.ServiceModel.Description.ClientCredentials)factory.Endpoint.EndpointBehaviors[typeof(System.ServiceModel.Description.ClientCredentials)];
             factory.Credentials.ServiceCertificate.SslCertificateAuthentication = new System.ServiceModel.Security.X509ServiceCertificateAuthentication
